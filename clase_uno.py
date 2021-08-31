@@ -116,3 +116,31 @@ print(type(y))
 a = 'hola'
 b = 'mundo'
 c = a + ' ' + b
+
+# Capturar por pantalla
+nombre = input('Digite su nombre: ')
+print('Hola', nombre)
+
+# Haga un algoritmo que sume dos numeros e imprima su resultado
+d = float(input('Digite el primer numero: '))
+e = float(input('Digite el segundo numero: '))
+f = d + e
+# print('La suma de los dos numeros es: ', f)
+print(f'La suma de los numeros {d} + {e} es {f}')
+
+# Haga un algoritmo que lea un numero y lo eleve al cuadrado
+
+numero = int(input('Digite el numero que desea sacar la potencia: '))
+potencia = numero ** 2
+print(f'{numero} elevado al cuadrado es igual a {potencia}')
+
+# Haga un algoritmo que tome el valor de un producto, le aplique el 20%
+# de descuento, imprima el valor del producto inicial,
+# el valor con descuento y el valor ahorrado
+
+valor_producto = float(input('Digite el valor del producto: $'))
+descuento = valor_producto * 0.20
+valor_prod_final = valor_producto - descuento
+print(f'El valor del producto es: {valor_producto:,}')
+print(f'El descuento aplicado es de: ${descuento:,}')
+print(f'EL valor final del producto es: ${valor_prod_final:,}')
