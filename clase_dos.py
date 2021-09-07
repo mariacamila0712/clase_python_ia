@@ -85,3 +85,31 @@ elif(número < 0):
     print('El número es negativo. ')
 else:
     print('El número es cero.')
+
+# Ciclos
+# Ciclo for
+for valor in range(11):
+    print(valor)
+for valor in range(1, 11):
+    print(valor)
+for valor in range(2, 11, 2):
+    print(valor)
+
+for valor in range(11):
+    print(valor)
+    print(valor + 1)
+
+# Haga un algoritmo que de las n notas de un estudiante y calcule el promedio
+# académico final.
+
+numero_notas = int(input('Digite cuantas notas va a promediar: '))
+if(numero_notas > 0):
+    suma = 0
+    for x in range(numero_notas):
+        calificación = float(input(f'Digite la nota {x + 1}: '))
+        suma = suma + calificación
+    promedio = suma / numero_notas
+    promedio = round(promedio, 2)
+    print(f'El promedio final es: {promedio}')
+else:
+    print('El número de notas no puede ser menor o igual a cero. ')
