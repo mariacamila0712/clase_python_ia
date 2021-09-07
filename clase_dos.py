@@ -48,3 +48,40 @@ print(True and (False and True) or False or (True or True))  # True
 # Jerarquia de operaciones booleanas
 # 1. Parentesis y llaves
 # 2. Tabla de verdad
+
+# Estructura if
+x = 1
+if (x > 0):
+    print('1')
+else:
+    print('2')
+    print('3')
+
+# Haga un algoritmo que dada la edad de una persona indique si es mayor o menor
+# de edad
+
+edad = int(input('Digite su edad: '))
+if(edad >= 18):
+    print('Es mayor de edad')
+else:
+    print('Es menor de edad')
+
+# Haga un algoritmo que indique si un estudiante aprobo o reprobo una
+# asignatura teniendo en cuenta que aprueba con minimo una calificacion de 3.0
+# hasta 5.0. EL rango válido de la nota debe ser entre 0 y 5.
+nota = float(input('Digite la nota: '))
+if(nota >= 3 and nota <= 5):
+    print('Usted aprobó la materia. ')
+elif(nota < 3 and nota > 0):
+    print('Usted reprobó la materia.')
+else:
+    print('La nota ingresada no es válida.')
+
+# Haga un algoritmo que dado un número n diga si es negativo, positivo o cero.
+número = float(input('Digite un número: '))
+if(número > 0):
+    print('El número es positivo. ')
+elif(número < 0):
+    print('El número es negativo. ')
+else:
+    print('El número es cero.')
