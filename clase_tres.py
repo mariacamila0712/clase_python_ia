@@ -42,3 +42,17 @@ a = b.copy()  # Copia los elementos de b en a
 b = a[:3]  # Cuando se quiere escoger desde 0 se puede omitir el 1er numero
 b = a[2:]  # Traer los elementos hasta el final
 b = a[:]  # Trae todo
+
+# Tuplas
+# Tipos de datos inmutable y ordenado
+a = (1, 2, 3, 4)
+print(a[1])
+a = (2, 3, 4)
+b = (2, True, 'Hola', 3.4)
+c = (2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6])
+4 in a
+
+
+# Set
+# Mutable pero no ordenado
+# No permiten arrays en su interior
