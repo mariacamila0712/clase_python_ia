@@ -10,6 +10,7 @@ Created on Mon Sep 13 19:24:31 2021
 # Listas o vectores
 # Tipos de datos mutables y ordenado
 
+a = []
 a = [2, 3, 4]
 b = [2, True, 'Hola', 3.4]
 c = [2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6]]
@@ -46,6 +47,7 @@ b = a[:]  # Trae todo
 # Tuplas
 # Tipos de datos inmutable y ordenado
 a = (1, 2, 3, 4)
+a = ()
 print(a[1])
 a = (2, 3, 4)
 b = (2, True, 'Hola', 3.4)
@@ -57,11 +59,12 @@ c = (2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6])
 # Mutable pero no ordenado
 # No permiten arrays en su interior
 a = {1, 2, 3, 4}
-
+a = set()
 b = {2, True, 'Hola', 3.4}
 
 # Diccionarios
 # Mutables y no ordenados
+a = {}
 a = {'nombre': 'Maria', 'apellido': 'Maza'}
 a = {1: 'Maria', 2: 'Maza'}
 
@@ -79,3 +82,75 @@ for valor in a.items():
 
 for llave, valor in a.items():
     print(f'Llave: {llave}, Valor: {valor}')
+
+
+# Funciones
+
+def nombre_funcion():
+    pass
+
+
+def saludar():
+    print('Hola Mundo')
+
+
+def saludar(nombre):
+    print(f'Hola {nombre}')
+
+
+# Python no permite la Sobrecarga de métodos
+# Parametros opcionales
+
+def saludar(nombre= 'Mundo'):
+    print(f'Hola {nombre}')
+
+
+def saludar(nombre, apellido=""):
+    print(f'Hola {nombre} {apellido}')
+
+
+def saludar(nombre="Mundo", apellido=""):
+    print(f'Hola {nombre} {apellido}')
+
+
+# No se puede tener un párametro obligatorio despues de un parámetro opcional
+# def saludar(nombre, apellido="", segundo_apellido):
+    print(f'Hola {nombre} {apellido}')
+
+# Parámetros ilimitados
+
+def saludar(*nombres):
+    for nombre in nombres:
+        print(f'Hola {nombre}')
+
+
+def saludar(*nombres, apellido = ""):
+    for nombre in nombres:
+        print(f'Hola {nombre}')
+    print(f'Apellido {apellido}')
+
+
+def saludar(*nombres, apellido):
+    for nombre in nombres:
+        print(f'Hola {nombre}')
+    print(f'Apellido {apellido}')
+
+def saludar(**nombres):
+    print(nombres)
+
+
+def resta(a, b):
+    print(a - b)
+
+def operaciones(a, b):
+    suma = a + b
+    resta = a - b
+    multiplicación = a * b
+    división = a / b
+    return suma, resta, multiplicación, división
+
+resultados = operaciones(4, 5)
+
+suma, res, mult, div = operaciones(4, 5)
+
+suma, _, _, div = operaciones(4, 5)
