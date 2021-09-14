@@ -31,7 +31,7 @@ print(c[3][1][1])
 a.append(5)  # Agrega el elemento al final de la lista
 a.remove(3)  # Elimina el elemento que coincida con el valor
 a.pop()  # Elimina el ultimo elemento del vector
-a.pop(2)  # Elimina un elemento por posicion
+# a.pop(2)  # Elimina un elemento por posicion
 a.clear()  # Elimina todos los elementos del vector
 # del a
 4 in a  # Busca el elemento 4 dentro de a
@@ -56,3 +56,26 @@ c = (2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6])
 # Set
 # Mutable pero no ordenado
 # No permiten arrays en su interior
+a = {1, 2, 3, 4}
+
+b = {2, True, 'Hola', 3.4}
+
+# Diccionarios
+# Mutables y no ordenados
+a = {'nombre': 'Maria', 'apellido': 'Maza'}
+a = {1: 'Maria', 2: 'Maza'}
+
+for valor in a:
+    print(valor)
+
+for valor in a.values():
+    print(valor)
+
+for valor in a.keys():
+    print(valor)
+
+for valor in a.items():
+    print(valor)
+
+for llave, valor in a.items():
+    print(f'Llave: {llave}, Valor: {valor}')
